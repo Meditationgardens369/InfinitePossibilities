@@ -2197,14 +2197,14 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
 .sjch.on{opacity:1;visibility:visible;transform:none}
 .sjch.noanim,.sjch.noanim *{transition:none!important}
 .sjwin{perspective:1100px}
-.sjwin-in{position:relative;aspect-ratio:16/10;border-radius:24px;overflow:hidden;border:3px solid rgba(255,255,255,.9);
+.sjwin-in{position:relative;aspect-ratio:1672/941;border-radius:24px;overflow:hidden;border:3px solid rgba(255,255,255,.9);
   background:linear-gradient(140deg,color-mix(in srgb,var(--cc) 38%,#fff),#FFF6EC 60%,#EFE6FA);
   box-shadow:0 50px 70px -36px rgba(30,20,60,.6),0 18px 30px -20px color-mix(in srgb,var(--cc) 60%,transparent);
   transform:rotateY(9deg) rotateX(3deg);transition:transform 1.3s cubic-bezier(.2,.8,.2,1)}
 .sjch:not(.on) .sjwin-in{transform:rotateY(28deg) rotateX(6deg) translateZ(-100px)}
-.sjwin-in img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.14);transition:transform 10s cubic-bezier(.2,.6,.3,1)}
-.sjch.on .sjwin-in img{transform:scale(1.01)}
-.sjch.dark .sjwin-in img{filter:saturate(.65) brightness(.95)}
+.sjwin-in img{width:100%;height:100%;object-fit:contain;display:block;opacity:0;filter:blur(10px) saturate(1.2);transition:opacity 1.2s ease .25s,filter 1.6s ease .25s}
+.sjch.on .sjwin-in img{opacity:1;filter:none}
+.sjch.dark.on .sjwin-in img{filter:saturate(.7) brightness(.96)}
 .sjch.dark .sjwin-in{background:linear-gradient(140deg,#AAB2C1,#E1E4EA 60%,#C3C8D3)}
 .sjph{position:absolute;inset:0;display:grid;place-items:center}
 .sjemb{animation:sofl 6s ease-in-out infinite;filter:drop-shadow(0 30px 30px color-mix(in srgb,var(--cc) 45%,transparent))}
