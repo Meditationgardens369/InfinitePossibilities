@@ -2174,6 +2174,50 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
   .sotiles{grid-template-columns:1fr}
 }
 
+/* soul outline: readable page */
+.sr{gap:26px}
+.srsec{display:flex;flex-direction:column;gap:22px;scroll-margin-top:12px}
+.srjump{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.srjump a{display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:99px;background:rgba(255,255,255,.85);border:1px solid #fff;color:var(--ink);font-weight:700;font-size:13.5px;text-decoration:none;box-shadow:0 10px 22px -14px rgba(30,20,60,.5);transition:transform .25s,box-shadow .25s}
+.srjump a:hover{transform:translateY(-2px);box-shadow:0 14px 26px -14px var(--cc)}
+.srjump svg{width:15px;height:15px;color:var(--cc)}
+.srblk{position:relative;border-radius:28px;padding:24px 26px 26px;background:linear-gradient(165deg,color-mix(in srgb,var(--cc) 14%,#fff),#fff 55%,#FFFBF6);border:1px solid color-mix(in srgb,var(--cc) 20%,#fff);
+  box-shadow:0 30px 60px -44px color-mix(in srgb,var(--cc) 85%,#000),inset 0 1px 0 #fff;opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.srblk.in{opacity:1;transform:none}
+.srblk.dark{--cc:#4A5366;background:linear-gradient(165deg,#DCE0E7,#F3F4F7 55%,#fff)}
+.srblk.good{--cc:#2F7D62;background:linear-gradient(165deg,#DDF1E8,#fff 60%)}
+.srhd{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin-bottom:18px}
+.sremb{animation:sofl 7s ease-in-out infinite;filter:drop-shadow(0 14px 16px color-mix(in srgb,var(--cc) 35%,transparent))}
+.sremb svg{display:block;overflow:visible}
+.srk{display:block;font:700 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--cc)}
+.srhd h3{font:400 32px/1.1 var(--serif);margin:4px 0 0;color:var(--ink)}
+.srhd .srlede{margin-top:8px}
+.srmoon{width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff,#C9CFDA 45%,#737C90);box-shadow:inset -12px -8px 20px rgba(30,37,51,.45),0 18px 26px -14px rgba(30,37,51,.6);animation:sofl 7s ease-in-out infinite}
+.srleaf{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 35% 30%,#7CC7A6,#2F7D62 72%);box-shadow:inset 0 -5px 10px rgba(0,0,0,.2),0 14px 22px -12px #2F7D62}
+.srleaf svg{width:28px;height:28px}
+.srgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.srcard{border-radius:20px;padding:16px 18px 18px;background:rgba(255,255,255,.92);border:1px solid #fff;box-shadow:0 18px 32px -24px rgba(30,20,60,.55);
+  opacity:0;transform:translateY(18px) scale(.98);transition:opacity .6s ease var(--d),transform .7s cubic-bezier(.2,.8,.2,1) var(--d),box-shadow .3s}
+.srcard.in{opacity:1;transform:none}
+.srcard:hover{box-shadow:0 24px 40px -24px color-mix(in srgb,var(--cc) 70%,#000)}
+.srch{display:flex;align-items:center;gap:10px}
+.srch b{font:500 20px/1.2 var(--serif);color:var(--ink)}
+.srci{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--cc) 50%,#fff),var(--cc) 72%);box-shadow:inset 0 -4px 8px rgba(0,0,0,.2),0 8px 14px -8px var(--cc)}
+.srci svg{width:16px;height:16px}
+.srlede{color:var(--muted);font-size:14px;margin:6px 0 0}
+.srpts{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.srpts li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5;color:var(--ink)}
+.srpts .soti{flex:none;margin-top:1px}
+.srpts.big{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px 18px}
+.srpts.big li{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.9);box-shadow:0 14px 26px -22px rgba(30,20,60,.5)}
+.srblk.good .soti{color:#2F7D62;background:linear-gradient(150deg,#fff,#D9EFE5)}
+.srblk.dark .soti{color:#4A5366;background:linear-gradient(150deg,#fff,#DDE1E8)}
+.srshine{display:flex;flex-direction:column;gap:10px}
+.srshine>div{display:flex;flex-wrap:wrap;gap:8px}
+.srshine>div span{padding:9px 15px;border-radius:99px;background:#fff;border:1px solid color-mix(in srgb,var(--cc) 25%,transparent);box-shadow:0 12px 22px -14px var(--cc);font-weight:700;font-size:13.5px;color:var(--ink)}
+@media (max-width:720px){.srblk{padding:18px 16px 20px;border-radius:22px}.srhd{gap:12px}.srhd h3{font-size:26px}.sremb svg{width:60px;height:60px}.srgrid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.srblk,.srcard{opacity:1;transform:none;transition:none}}
+
 /* soul journey */
 .sj{gap:14px}
 .sjrail{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:4px 2px 6px}
