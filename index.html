@@ -2133,6 +2133,45 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
   .sopol button{min-width:96px;padding:9px 14px}
 }
 @media (prefers-reduced-motion:reduce){.so3 *{animation:none!important}}
+
+/* soul outline: reading as 3D tiles */
+.sofx{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px;margin-top:18px;align-items:start}
+.sofx .sotabs{flex-direction:column;flex-wrap:nowrap;margin:0;gap:8px;position:relative}
+.sofx .sotabs::before{content:"";position:absolute;left:27px;top:18px;bottom:18px;width:2px;background:linear-gradient(var(--cc),transparent);opacity:.25}
+.sofx .sotabs button{position:relative;justify-content:flex-start;gap:10px;padding:8px 12px 8px 8px;border-radius:18px;font-size:13.5px;text-align:left;background:rgba(255,255,255,.8);box-shadow:0 8px 18px -14px rgba(40,30,70,.5);transition:transform .35s cubic-bezier(.3,1.3,.4,1),background .3s,color .3s,box-shadow .3s}
+.sofx .sotabs button[aria-selected="true"]{transform:translateX(8px) scale(1.03);background:var(--cc);color:#fff;border-color:var(--cc);box-shadow:0 14px 26px -12px var(--cc)}
+.so3.dark .sofx .sotabs button[aria-selected="true"]{background:#4A5366;border-color:#4A5366;box-shadow:0 14px 26px -12px #2C3445}
+.sobi{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--cc) 50%,#fff),var(--cc) 72%);box-shadow:inset 0 -4px 8px rgba(0,0,0,.2),inset 0 3px 5px rgba(255,255,255,.5),0 6px 12px -6px var(--cc)}
+.sofx .sotabs button[aria-selected="true"] .sobi{background:radial-gradient(circle at 35% 30%,#fff,rgba(255,255,255,.55) 70%);color:var(--cc)}
+.so3.dark .sobi{background:radial-gradient(circle at 35% 30%,#A3ABBC,#4A5366 72%)}
+.so3.dark .sofx .sotabs button[aria-selected="true"] .sobi{color:#4A5366;background:radial-gradient(circle at 35% 30%,#fff,rgba(255,255,255,.55) 70%)}
+.sobi svg{width:17px!important;height:17px!important}
+.sobl{flex:1;line-height:1.25}
+.sobn{flex:none;font-size:11px;font-weight:800;min-width:22px;height:22px;border-radius:99px;display:grid;place-items:center;background:color-mix(in srgb,var(--cc) 12%,#fff);color:var(--cc)}
+.sofx .sotabs button[aria-selected="true"] .sobn{background:rgba(255,255,255,.25);color:#fff}
+.sopane.rbox{background:none;border:0;padding:0}
+.sosub{display:block;font:500 20px/1.2 var(--serif);margin:2px 0 10px;color:var(--ink)}
+.sotiles{list-style:none;margin:0!important;padding:0!important;display:grid!important;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px!important;perspective:1000px}
+.sotile{position:relative;display:flex;gap:12px;align-items:center;min-height:64px;padding:12px 14px;border-radius:18px;font-size:14px;line-height:1.4;color:var(--ink);
+  background:linear-gradient(160deg,#fff 0%,color-mix(in srgb,var(--cc) 8%,#fff) 100%);border:1px solid #fff;
+  box-shadow:inset 0 1px 0 #fff,0 16px 28px -20px color-mix(in srgb,var(--cc) 70%,#000);transform-origin:50% 0;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.sotile::before{display:none}
+.sotile:hover{transform:translateY(-5px) rotateX(8deg) scale(1.02);box-shadow:inset 0 1px 0 #fff,0 26px 36px -20px color-mix(in srgb,var(--cc) 75%,#000)}
+.sopane.on .sotile{animation:sotin .75s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}
+@keyframes sotin{from{opacity:0;transform:rotateX(-75deg) translateY(18px)}}
+.soti{flex:none;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;color:var(--cc);background:linear-gradient(150deg,#fff,color-mix(in srgb,var(--cc) 18%,#fff));box-shadow:inset 0 -3px 6px color-mix(in srgb,var(--cc) 18%,transparent),0 6px 12px -8px var(--cc);transform:translateZ(20px)}
+.soti svg{width:18px;height:18px}
+.so3.dark .sotile{background:linear-gradient(160deg,#fff,#EEF0F4);box-shadow:inset 0 1px 0 #fff,0 16px 28px -20px #2C3445}
+.so3.dark .soti{color:#4A5366;background:linear-gradient(150deg,#fff,#DDE1E8)}
+.sopane.good .soti{color:#2F7D62;background:linear-gradient(150deg,#fff,#D9EFE5)}
+@media (max-width:720px){
+  .sofx{grid-template-columns:1fr}
+  .sofx .sotabs{flex-direction:row;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:none}
+  .sofx .sotabs::before{display:none}
+  .sofx .sotabs button{flex:none}
+  .sofx .sotabs button[aria-selected="true"]{transform:translateY(-3px)}
+  .sotiles{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
