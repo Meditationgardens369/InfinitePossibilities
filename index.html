@@ -2243,11 +2243,11 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
 .sjmoon span::after{content:"";position:absolute;inset:-34px;border-radius:50%;border:1.5px dashed rgba(74,83,102,.4);animation:sjrot 34s linear infinite}
 @keyframes sjrot{to{transform:rotate(360deg)}}
 .sjmosaic{position:relative;height:430px;perspective:1300px}
-.sjm{position:absolute;width:60%;aspect-ratio:16/10;border-radius:18px;overflow:hidden;border:3px solid #fff;box-shadow:0 34px 54px -30px rgba(30,20,60,.65);
+.sjm{position:absolute;width:60%;aspect-ratio:1672/941;border-radius:18px;overflow:hidden;border:3px solid #fff;box-shadow:0 34px 54px -30px rgba(30,20,60,.65);
   left:calc(var(--j) * 9.5%);top:calc(var(--j) * 14%);transform:rotateY(14deg) rotateZ(calc((var(--j) - 2) * 2.5deg)) translateZ(calc(var(--j) * 24px));opacity:0}
 .sjch.on .sjm{animation:sjdeal 1s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--j) * .16s + .25s)}
 @keyframes sjdeal{from{opacity:0;transform:translateY(50px) rotateY(34deg) translateZ(-60px)}to{opacity:1}}
-.sjm img{width:100%;height:100%;object-fit:cover;display:block}
+.sjm img{width:100%;height:100%;object-fit:contain;display:block}
 .sjshine{display:flex;flex-wrap:wrap;gap:8px}
 .sjshine span{padding:9px 15px;border-radius:99px;background:#fff;border:1px solid color-mix(in srgb,var(--cc) 25%,transparent);box-shadow:0 12px 22px -14px var(--cc);font-weight:700;font-size:13.5px;color:var(--ink);opacity:0;transform:translateY(14px) scale(.92)}
 .sjch.on .sjshine span{animation:sjin .7s cubic-bezier(.3,1.3,.4,1) forwards;animation-delay:var(--d)}
