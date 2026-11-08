@@ -1771,7 +1771,12 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
 .jtile.on{transform:scale(1.05);border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 25%,transparent),0 16px 26px -14px var(--c);z-index:1}
 .jhelp{align-self:flex-start;display:inline-flex;align-items:center;gap:5px;padding:3px 9px 3px 3px;border-radius:99px;border:1px dashed color-mix(in srgb,var(--c) 45%,transparent);background:#fff;font:700 11px var(--sans);color:var(--muted);cursor:pointer}
 .jhelp span{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 18%,#fff);color:var(--c);font-size:10px}
-.jhelp.on{border-style:solid;border-color:var(--c);color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 18%,transparent)}
+.jhelp.on{border-style:solid;border-color:var(--c);background:var(--c);color:#fff;transform:scale(1.08);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,transparent),0 10px 18px -10px var(--c);animation:helpglow 1.8s ease-in-out infinite}
+.jhelp.on span{background:#fff;color:var(--c)}
+@keyframes helpglow{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--c) 12%,transparent),0 10px 18px -10px var(--c)}}
+.jmg .jtile:not(.on),.jmg .jhelp:not(.on){opacity:.42;filter:saturate(.6);transition:opacity .3s,filter .3s}
+.jmg .jtile:not(.on):hover,.jmg .jhelp:not(.on):hover{opacity:1;filter:none}
+@media (prefers-reduced-motion:reduce){.jhelp.on{animation:none}}
 .jhelp.passed{opacity:.5}
 @media (max-width:560px){.jmg{grid-template-columns:76px repeat(var(--n),minmax(138px,1fr));min-width:calc(76px + var(--n) * 146px)}.jmp b{font-size:11px}.jmp{flex-direction:column;align-items:flex-start;gap:3px}.jmp .jps{width:30px;height:30px;font-size:13px}.jview{margin-left:0}}
 </style>
