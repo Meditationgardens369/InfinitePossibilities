@@ -2034,6 +2034,105 @@ li>.edx{top:50%;margin-top:-12px;width:24px;height:24px;right:4px}
 .gx .gxh .gxhv{position:static;grid-area:1/1;align-self:center;top:auto}
 .gx .gxh .gxml{grid-area:2/1}
 @media (max-width:980px){.gx .gxh .gxhv small{font-size:9px;letter-spacing:-.01em}}
+
+/* soul outline: 3D stage, light and shadow */
+.so3{display:flex;flex-direction:column;gap:22px;overflow-x:clip}
+.sogal{overflow-x:clip;padding-bottom:6px}
+.sohero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;align-items:center;padding:24px 28px;border-radius:28px;overflow:hidden;min-height:360px;
+  background:radial-gradient(110% 90% at 22% 40%,color-mix(in srgb,var(--cc) 30%,#fff) 0%,#FFF8F1 55%,#F5EFFB 100%);border:1px solid #fff;
+  box-shadow:inset 0 1px 0 #fff,0 30px 60px -40px color-mix(in srgb,var(--cc) 70%,#000);transition:background .8s,box-shadow .8s}
+.so3.dark .sohero{background:radial-gradient(110% 90% at 22% 40%,#BFC5D1 0%,#E2E5EB 55%,#D3D8E1 100%);box-shadow:inset 0 1px 0 #fff,0 30px 60px -40px #2C3445}
+.sosky{position:absolute;inset:0;pointer-events:none}
+.sosky i{position:absolute;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,#fff 0,color-mix(in srgb,var(--cc) 70%,#fff) 40%,transparent 72%);opacity:0;animation:sotw 5.5s ease-in-out infinite;animation-delay:calc(var(--i) * -.41s)}
+.so3.dark .sosky i{background:radial-gradient(circle,#fff 0,#8C95A8 40%,transparent 72%)}
+@keyframes sotw{0%,100%{opacity:0;transform:translateY(0) scale(.5)}50%{opacity:.95;transform:translateY(-16px) scale(1.25)}}
+.sostage{position:relative;perspective:900px;display:grid;place-items:center;height:310px}
+.sotilt{position:relative;width:300px;height:300px;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.soring{position:absolute;inset:26px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--cc) 45%,transparent);transform:rotateX(74deg) translateZ(-70px);animation:sospin 18s linear infinite}
+.soring.r2{inset:-14px;border-style:dashed;opacity:.55;animation-duration:30s;animation-direction:reverse}
+.so3.dark .soring{border-color:#8C95A8}
+@keyframes sospin{to{transform:rotateX(74deg) translateZ(-70px) rotateZ(360deg)}}
+.soorb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) translateZ(50px);animation:sofl 6s ease-in-out infinite;filter:drop-shadow(0 28px 26px color-mix(in srgb,var(--cc) 45%,transparent));transition:filter .8s}
+.soorb.two.soo0{left:40%;top:43%}
+.soorb.two.soo1{left:68%;top:64%;transform:translate(-50%,-50%) translateZ(110px);animation-delay:-2.5s}
+.so3.dark .soorb{filter:grayscale(.85) brightness(.82) drop-shadow(0 26px 24px rgba(40,48,64,.45))}
+@keyframes sofl{50%{margin-top:-14px}}
+.soorb svg,.sosat svg,.sofc .remb svg{display:block;overflow:visible}
+.sosat{position:absolute;inset:0;animation:soorbit 16s linear infinite}
+.sosat-in{position:absolute;left:50%;top:-8px;animation:socounter 16s linear infinite;filter:drop-shadow(0 10px 12px rgba(40,30,80,.35))}
+.sosat.s2{inset:34px;animation-duration:24s;animation-direction:reverse}
+.sosat.s2 .sosat-in{animation-duration:24s;animation-direction:reverse}
+@keyframes soorbit{to{transform:rotate(360deg)}}
+@keyframes socounter{from{transform:translateX(-50%) rotate(0)}to{transform:translateX(-50%) rotate(-360deg)}}
+.so3.dark .sosat{filter:grayscale(.7)}
+.sofloor{position:absolute;left:12%;right:12%;bottom:-8px;height:44px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--cc) 38%,transparent),transparent)}
+.so3.dark .sofloor{background:radial-gradient(closest-side,rgba(44,52,69,.35),transparent)}
+.sotext{position:relative;z-index:1}
+.sotext .kicker{color:var(--cc);transition:color .6s}
+.so3.dark .sotext .kicker{color:#4A5366}
+.sotext h3{font:400 34px/1.1 var(--serif);margin:6px 0 10px;color:var(--ink);transition:color .6s}
+.so3.dark .sotext h3{color:#394152}
+.sotext .cchips{margin-top:12px}
+.sopol{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:18px;padding:4px;border-radius:99px;background:rgba(255,255,255,.75);border:1px solid #fff;box-shadow:0 12px 26px -16px rgba(0,0,0,.4)}
+.sopol button{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:7px;border:0;background:none;padding:10px 20px;min-width:112px;border-radius:99px;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer;transition:color .35s}
+.sopol button svg{width:16px;height:16px}
+.sopol button[aria-pressed="true"]{color:#fff}
+.sothumb{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:99px;background:var(--cc);box-shadow:0 8px 18px -8px var(--cc);transition:transform .5s cubic-bezier(.3,1.35,.4,1),background .6s}
+.so3.dark .sothumb{transform:translateX(100%);background:#4A5366;box-shadow:0 8px 18px -8px #2C3445}
+.sogal{display:flex;flex-direction:column;gap:12px}
+.sogh{display:flex;justify-content:space-between;align-items:baseline;gap:6px 14px;flex-wrap:wrap}
+.sogh h4{font:500 22px var(--serif)}
+.socf{position:relative;height:380px;perspective:1300px;transform-style:preserve-3d;touch-action:pan-y;transition:height .4s}
+.sopic{position:absolute;left:50%;top:0;width:min(460px,80%);margin:0;border-radius:22px;background:#fff;border:1px solid #fff;overflow:hidden;cursor:pointer;
+  box-shadow:0 34px 60px -34px rgba(40,30,70,.6);
+  transform:translateX(-50%) translateX(calc(var(--o) * 60%)) translateZ(calc(var(--a) * -170px)) rotateY(calc(var(--o) * -34deg));
+  opacity:calc(1 - var(--a) * .3);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s}
+.sopic.cur{cursor:default}
+.soimg{aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden;background:linear-gradient(140deg,color-mix(in srgb,var(--cc) 32%,#fff),#FFF6EC 58%,#EFE6FA)}
+.so3.dark .soimg{background:linear-gradient(140deg,#B3BAC8,#E1E4EA 58%,#C5CAD5)}
+.soimg img{width:100%;height:100%;object-fit:cover;display:block}
+.sopic.cur .soimg img{animation:sokb 16s ease-in-out infinite alternate}
+@keyframes sokb{to{transform:scale(1.09) translate(-1.5%,-1%)}}
+.soph{display:flex;flex-direction:column;align-items:center;gap:8px;color:color-mix(in srgb,var(--cc) 70%,#333);font-weight:700;font-size:13px;opacity:.8}
+.so3.dark .soph{color:#4A5366}
+.soph svg{width:44px;height:44px;stroke-width:1.3}
+.sopic figcaption{padding:12px 16px 2px;display:flex;flex-direction:column;gap:3px}
+.sopic figcaption b{font:500 19px/1.2 var(--serif)}
+.sopic figcaption span{font-size:13.5px;color:var(--muted)}
+.soact{display:flex;gap:6px;padding:8px 14px 14px;opacity:0;transition:opacity .35s}
+.sopic.cur .soact{opacity:1}
+.soact .ghost{display:flex;align-items:center;gap:6px;font-size:12.5px}
+.soact svg{width:14px;height:14px}
+.sodots{display:flex;gap:8px;justify-content:center}
+.sodots button{width:9px;height:9px;padding:0;border-radius:99px;border:0;background:color-mix(in srgb,var(--cc) 25%,#ddd);cursor:pointer;transition:width .35s,background .35s}
+.sodots button[aria-current="true"]{width:30px;background:var(--cc)}
+.so3.dark .sodots button[aria-current="true"]{background:#4A5366}
+.sofacets{display:flex;flex-direction:column;gap:16px}
+.sofc{border-radius:24px;padding:18px 20px;background:linear-gradient(170deg,color-mix(in srgb,var(--cc) 12%,#fff),#fff 60%);border:1px solid color-mix(in srgb,var(--cc) 22%,transparent);box-shadow:0 18px 40px -28px var(--cc);perspective:900px;transition:background .6s}
+.sofc.grp{--cc:#3B3170}
+.so3.dark .sofc{background:linear-gradient(170deg,#E4E7ED,#fff 60%);border-color:#D5DAE3}
+.sofc header{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.sofc .remb{animation:efloat 7s ease-in-out infinite;filter:drop-shadow(0 14px 16px color-mix(in srgb,var(--cc) 30%,transparent))}
+.so3.dark .sofc .remb{filter:grayscale(.75) drop-shadow(0 14px 16px rgba(44,52,69,.3))}
+.sofc .k{font:700 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--cc)}
+.sofc h3{font:400 26px/1.1 var(--serif);margin:4px 0 6px}
+.sofc header p{color:var(--muted);font-size:14.5px;line-height:1.5}
+.sotabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 10px}
+.sotabs button{display:flex;align-items:center;gap:6px;border:1px solid color-mix(in srgb,var(--cc) 25%,transparent);background:#fff;border-radius:99px;padding:7px 13px;font-weight:700;font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .25s}
+.sotabs button svg{width:14px;height:14px}
+.sotabs button[aria-selected="true"]{background:var(--cc);border-color:var(--cc);color:#fff;transform:translateY(-2px);box-shadow:0 10px 18px -10px var(--cc)}
+.so3.dark .sotabs button[aria-selected="true"]{background:#4A5366;border-color:#4A5366}
+.sopanes{display:grid}
+.sopane{grid-area:1/1;opacity:0;visibility:hidden;transform:rotateX(-16deg) translateY(12px);transform-origin:top center;transition:opacity .45s,transform .6s cubic-bezier(.2,.8,.2,1),visibility .45s}
+.sopane.on{opacity:1;visibility:visible;transform:none}
+@media (max-width:720px){
+  .sohero{grid-template-columns:1fr;padding:16px 18px 22px;min-height:0}
+  .sostage{height:250px}.sotilt{width:240px;height:240px}
+  .sotext h3{font-size:28px}
+  .sopic{width:84%;transform:translateX(-50%) translateX(calc(var(--o) * 70%)) translateZ(calc(var(--a) * -170px)) rotateY(calc(var(--o) * -34deg))}
+  .sopol button{min-width:96px;padding:9px 14px}
+}
+@media (prefers-reduced-motion:reduce){.so3 *{animation:none!important}}
 </style>
 </head>
 <body>
